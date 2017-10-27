@@ -1,0 +1,59 @@
+table {
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  border-collapse: collapse;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+
+tbody {
+  tr {
+    height: $table-tr-height;
+    position: relative;
+  }
+}
+
+th {
+  color: $color-h2;
+  height: $table-tr-height;
+  letter-spacing: 0;
+  line-height: $table-tr-height / 2;
+  padding: 0 $spacer $gutter;
+  position: relative;
+  vertical-align: bottom;
+
+  &:first-of-type {
+    padding-left: $table-tr-height / 2;
+  }
+}
+
+td {
+  background-color: $color-red;
+  border-bottom: 1px solid $color-white;
+  border-top: 1px solid $color-white;
+  color: $color-white;
+  height: $table-tr-height;
+  padding: $gutter $spacer;
+  position: relative;
+
+  &:first-of-type {
+    padding-left: $table-tr-height / 2;
+  }
+}
+
+.browser-support-table {
+  border: 0;
+  margin: $spacer * 2 0;
+  width: 100%;
+}
+
+.supported {
+  background-color: $color-green;
+  color: $color-black;
+}
+
+.prefixed {
+  background-color: $color-yellow;
+  color: $color-black;
+}

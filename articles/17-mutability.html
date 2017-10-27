@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Mutability
+        <span class="title__caption"><code>:read-only / :read-write</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The mutability pseudo-classes represents elements whose contents are, or are not user-alterable.
+    </section>
+
+    <section class="info hint">
+      <p>
+        :read-only
+        The :read-only pseudo-class represents an element that is not user-alterable.
+      </p>
+      <p>
+        :read-write
+        The :read-write pseudo-class represents an element that is user-alterable. This could be an input element or a contenteditable element (HTML5 attribute).
+      </p>
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td class="supported">yes</td>
+          <td class="prefixed">-moz</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td class="supported">yes</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td class="supported">yes</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:read-only { /* Style properties */ }
+            E:read-write { /* Style properties */ }
+
+            E:-moz-read-only { /* Firefox */ }
+            E:-moz-read-write { /* Firefox */ }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* All div elements (read-only) will simply have a grey background. Read-write elements will have another color. */
+
+            div:read-only {
+              background-color: moccasin;
+            }
+
+            div:read-write {
+              background-color: lightgray;
+            }
+          </code>
+          </pre>
+      </div>
+
+      <div class="codepen">
+        <p data-height="314" data-theme-id="0" data-slug-hash="jGddZZ" data-default-tab="result" data-user="Elvis-M16" data-embed-version="2" data-pen-title="mutability" class="codepen">See the Pen <a href="https://codepen.io/Elvis-M16/pen/jGddZZ/">mutability</a> by Marc (<a href="https://codepen.io/Elvis-M16">@Elvis-M16</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

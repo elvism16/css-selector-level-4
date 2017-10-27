@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Scope
+        <span class="title__caption"><code>:scope</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The <code>:scope</code> pseudo-class represents any element that is a 'scope element.' This is a (potentially empty) set of
+      elements that provide a reference point for selectors to match against, such as that specified by the
+      querySelector() call in DOM, or the parent element of a scoped <code>style</code> element in HTML5.
+    </section>
+
+    <section class="info hint">
+      In HTML5, the scoped <code>style scoped</code> attribute is a boolean attribute. When present, it specifies that
+      the styles are only applied to this element's parent element and that element's child elements.
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td>no</td> <!-- <td>no</td> -->
+          <td>no</td> <!-- <td class="prefixed">-webkit</td> -->
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:scope {
+              /* Style properties */
+            }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

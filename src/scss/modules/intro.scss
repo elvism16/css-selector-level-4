@@ -1,0 +1,31 @@
+.welcome {
+  align-items: center;
+  background-color: $color-blue;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+
+  .headline {
+    margin: 0;
+
+    a {
+      color: $color-white;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  span {
+    font-size: 7em;
+    font-weight: 700;
+
+    &:last-child {
+      display: block;
+      font-size: 4em;
+      font-weight: 300;
+      margin-top: .5em;
+    }
+  }
+}

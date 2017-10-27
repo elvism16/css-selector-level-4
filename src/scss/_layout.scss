@@ -1,0 +1,38 @@
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+  font-family: $base-font;
+  font-size: $base-font-size;
+}
+
+h1 {
+  font-family: $h1-font-family;
+  font-weight: 300;
+}
+
+h2,
+h3,
+h4 {
+  font-family: $headline-font-family;
+  font-weight: 400;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 $spacer;
+}

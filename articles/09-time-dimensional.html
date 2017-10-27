@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Time Dimensional
+        <span class="title__caption"><code>:current / :past / :future</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The time-dimensional pseudo-classes categorize elements with respect to the currently active position in a
+      timeline (i.e. speech rendering of a document or video subtitles).
+    </section>
+
+    <section class="info">
+     <p>
+       <code>:current</code>
+       The :current pseudo-class matches an element that is currently being displayed. It takes a selector list as an argument.
+     </p>
+      <p>
+        <code>:past</code>
+        The :past pseudo-class matches any element that is defined to come before a :current element.
+      </p>
+      <p>
+        <code>:future</code>
+        The :future pseudo-class represents any element that is defined to come after a :current element.
+      </p>
+    </section>
+
+    <section class="info hint">
+      These selectors are similar to :matches().
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td>no</td> <!-- <td class="supported">yes</td> -->
+          <td>no</td> <!-- <td class="prefixed">-webkit</td> -->
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:current(s1, s2, ...) { /* Style properties */ }
+
+            E:past(s1, s2, ...) { /* Style properties */ }
+
+            E:future(s1, s2, ...) { /* Style properties */ }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* Assume that paragraphs and lists are being read aloud. The following will highlight the current paragraph or list item being read in yellow, and the rest will be gray. */
+
+            :current(p, li) {
+              background-color: yellow;
+            }
+
+            :past(p, li),
+            :future(p, li) {
+              background-color: gray
+            }
+          </code>
+          </pre>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Directionality
+        <span class="title__caption"><code>:dir(ltr/rtl)</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The <code>:dir()</code> pseudo-class represents an element based on its directionality.
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td>no</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>no</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:dir(direction)
+              /* Where "direction" can either be ltr or rtl. */
+            }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* The following selector matches all blockquotes with a dir attribute ltr. */
+
+            blockquote:dir(ltr) {
+              border-left: 5px solid #555;
+            }
+
+            /* The following selector matches all blockquotes with a dir attribute rtl. */
+
+            blockquote:dir(rtl) {
+              border-right: 5px solid #555;
+            }
+          </code>
+          </pre>
+      </div>
+
+      <div class="codepen">
+        <p data-height="216" data-theme-id="0" data-slug-hash="BwqXyK" data-default-tab="result" data-user="Elvis-M16" data-embed-version="2" data-pen-title="Directionality" class="codepen">See the Pen <a href="https://codepen.io/Elvis-M16/pen/BwqXyK/">Directionality</a> by Marc (<a href="https://codepen.io/Elvis-M16">@Elvis-M16</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

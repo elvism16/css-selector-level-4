@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Grid-Structural
+        <span class="title__caption"><code>:column(selector) / :nth-column(n) / :nth-last-column(n)</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The grid-structural pseudo-classes apply to structural grids, such as tables
+    </section>
+
+    <section class="info">
+      <p>
+        :column(selector)
+        The :column() pseudo-class matches any cell belonging to a column, in a grid or table, represented by the passed argument (selector).
+      </p>
+      <p>
+        :nth-column(n)
+        The :nth-column() pseudo-class matches any cell, in a grid or table, belonging to the nth column in a grid or table.
+      </p>
+      <p>
+        :nth-last-column(n)
+        The :nth-last-column() pseudo-class represents any cell belonging to the nth column in a grid or table, counting from the last one.
+      </p>
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td>no</td> <!-- <td class="supported">yes</td> -->
+          <td>no</td> <!-- <td class="prefixed">-webkit</td> -->
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:column(selector) { /* Style properties */ }
+
+            E:nth-column(an + b) { /* Style properties */ }
+
+            E:nth-last-column(an + b) { /* Style properties */ }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* In this example, all columns with the class selected will have a yellow background. */
+
+            :column(.selected) {
+              background: yellow;
+            }
+
+            /* This example sets a blue background to every second column. */
+
+            :nth-column(2n) {
+              background: blue;
+            }
+
+            /* In the following example, every third column, counting from the last one, with an offset of 1, will have a red background. */
+
+            :nth-last-column(3n+1) {
+              background: red;
+            }
+          </code>
+          </pre>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../more-css.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Placeholder-shown
+        <span class="title__caption"><code>:placeholder-shown</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The :placeholder-shown pseudo-class matches an input element that has placeholder text.
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="prefixed">-ms</td>
+          <td class="prefixed">-ms</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td class="prefixed">-ms</td>
+          <td class="prefixed">-ms</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:placeholder-shown { /* Style properties */ }
+
+            E::-webkit-input-placeholder { /* Chrome, Safari, Opera */ }
+            E::-moz-placeholder { /* Firefox */ }
+            E:-ms-input-placeholder { /* IE */ }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* Every input element with a placeholder will have a green broder. */
+
+            input:placeholder-shown {
+              border: 3px solid green;
+            }
+          </code>
+          </pre>
+      </div>
+
+      <div class="codepen">
+        <p data-height="246" data-theme-id="0" data-slug-hash="dVaaaG" data-default-tab="result" data-user="Elvis-M16" data-embed-version="2" data-pen-title="Placeholder-shown" class="codepen">See the Pen <a href="https://codepen.io/Elvis-M16/pen/dVaaaG/">Placeholder-shown</a> by Marc (<a href="https://codepen.io/Elvis-M16">@Elvis-M16</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

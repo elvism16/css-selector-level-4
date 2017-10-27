@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Optionality
+        <span class="title__caption"><code>:required / :optional</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The optionality pseudo-classes match form-elements which are required or optional.
+    </section>
+
+    <section class="info">
+      <p>
+        <code>:required</code>
+        The required pseudo-class represents an input element with a required attribute set on it.
+      </p>
+      <p>
+        <code>:optional</code>
+        The optional pseudo-class represents an input element does not have a required attribute set on it.
+      </p>
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td class="supported">yes</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:required { /* Style properties */ }
+
+            E:optional { /* Style properties */ }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* In this example, all required input elements will be yellow, while the others are simply white. */
+
+            input:required {
+              background-color: yellow;
+            }
+
+            input:optional {
+              background-color: lightgray;
+            }
+          </code>
+          </pre>
+      </div>
+
+      <div class="codepen">
+        <p data-height="258" data-theme-id="0" data-slug-hash="rGQBvV" data-default-tab="result" data-user="Elvis-M16" data-embed-version="2" data-pen-title="Required" class="codepen">See the Pen <a href="https://codepen.io/Elvis-M16/pen/rGQBvV/">Required</a> by Marc (<a href="https://codepen.io/Elvis-M16">@Elvis-M16</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

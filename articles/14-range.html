@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Range
+        <span class="title__caption"><code>:in-range / :out-of-range</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The range pseudo-classes apply to elements with range limitations.
+    </section>
+
+    <section class="info">
+      <p>
+        <code>:in-range</code>
+        The in-range pseudo-class represents an element whose value is within its range.
+      </p>
+      <p>
+        <code>:out-of-range</code>
+        The out-of-range pseudo-class represents an element whose value is outside of its range.
+      </p>
+    </section>
+
+    <section class="info warning">
+      An element without range limits or is not a form control is neither <code>:in-range</code> nor <code>:out-of-range</code>.
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td class="supported">yes</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td class="supported">yes</td>
+          <td>no</td>
+          <td class="supported">yes</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:in-range { /* Style properties */ }
+
+            E:out-of-range { /* Style properties */ }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* In this example, all number type inputs that are within their range will have green backgrounds, otherwise, they will have red backgrounds. */
+
+            input:in-range {
+              background-color: green;
+            }
+
+            input:out-of-range {
+              background-color: red;
+            }
+          </code>
+          </pre>
+      </div>
+
+      <div class="codepen">
+        <p data-height="236" data-theme-id="0" data-slug-hash="JrePWX" data-default-tab="result" data-user="Elvis-M16" data-embed-version="2" data-pen-title="Range" class="codepen">See the Pen <a href="https://codepen.io/Elvis-M16/pen/JrePWX/">Range</a> by Marc (<a href="https://codepen.io/Elvis-M16">@Elvis-M16</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

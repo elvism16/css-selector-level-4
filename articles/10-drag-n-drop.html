@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Level 4 Selectors</title>
+
+  <script type="text/javascript" src="../dist/bundle.js"></script>
+
+  <link rel='stylesheet' href='../dist/app.css'>
+
+  <script src="https://use.typekit.net/wtm4gkr.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <header class="banner-article">
+      <h1 class="title">
+        Drag and Drop
+        <span class="title__caption"><code>:drop</code></span>
+      </h1>
+    </header>
+
+    <section class="info">
+      The <code>:drop</code> pseudo-class matches any element that is a drop target, while the user is dragging an item to be dropped.
+
+      The <code>:drop()</code> pseudo-class is similar to <code>:drop</code>, but allows additional filters to be specified, to exclude some drop targets.
+    </section>
+
+    <section class="info">
+      <h2>Browser Support</h2>
+      <table class="browser-support-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+          <th>Opera</th>
+          <th>IE</th>
+          <th>Edge</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Desktop</th>
+          <td>no</td> <!-- <td class="supported">yes</td> -->
+          <td>no</td> <!-- <td class="prefixed">-webkit</td> -->
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info">
+      <h2>Syntax</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            E:drop { /* Style properties */ }
+
+            E:drop(active || valid || invalid) {
+              /*
+              active: the current drop target for the drag operation
+              valid: matches if the drop target is valid for the object currently being dragged
+              invalid: matches if the drop target is invalid for the object currently being dragged
+              */
+            }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Example</h2>
+      <div class="code">
+        <pre class="code-block">
+          <code class="css">
+            /* a yellow outline is added to every drop target. */
+
+            :drop {
+              outline: 1px solid yellow;
+            }
+
+            /* a green outline is added to all active and valid drop targets. */
+
+            :drop(valid active) {
+              outline: 1px solid green;
+            }
+          </code>
+          </pre>
+      </div>
+    </section>
+
+    <a class="btn-back" href="../main.html">back</a>
+  </main>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>
